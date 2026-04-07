@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DualShot — 隱私權政策 Privacy Policy</title>
+    <style>
+        :root {
+            --bg: #FAF8F5;
+            --card: #FFFFFF;
+            --primary: #2C2C2C;
+            --secondary: #6B6B6B;
+            --tertiary: #9E9E9E;
+            --accent: #E8A598;
+            --border: #E8E4E0;
+            --radius: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+            background: var(--bg);
+            color: var(--primary);
+            line-height: 1.7;
+            padding: 0 20px;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 0 80px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--secondary);
+            font-size: 15px;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 40px;
+        }
+
+        .lang-switch button {
+            padding: 6px 16px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: var(--card);
+            color: var(--secondary);
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .lang-switch button.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        section {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 28px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        section h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        section p, section li {
+            font-size: 15px;
+            color: var(--secondary);
+        }
+
+        section ul {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+
+        section li {
+            margin-bottom: 6px;
+        }
+
+        .highlight {
+            background: #F5F0EC;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-top: 12px;
+        }
+
+        .highlight p {
+            font-size: 14px;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 0;
+            color: var(--tertiary);
+            font-size: 13px;
+        }
+
+        footer .slogan {
+            color: var(--secondary);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>DualShot</h1>
+        <p class="lang-label-zh">隱私權政策</p>
+        <p class="lang-label-en hidden">Privacy Policy</p>
+    </header>
+
+    <div class="lang-switch">
+        <button id="btn-zh" class="active" onclick="switchLang('zh')">繁體中文</button>
+        <button id="btn-en" onclick="switchLang('en')">English</button>
+    </div>
+
+    <!-- 繁體中文 -->
+    <div id="content-zh">
+        <section>
+            <h2>總覽</h2>
+            <p>DualShot 是一款完全離線運作的相機錄影 App。我們不收集、不儲存、不傳輸任何使用者資料。你的影片只存在你的裝置上。</p>
+            <div class="highlight">
+                <p>簡單來說：我們什麼都不收集。</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>資料收集</h2>
+            <p>DualShot 不收集任何個人資訊，包括但不限於：</p>
+            <ul>
+                <li>姓名、電子郵件、電話號碼</li>
+                <li>位置資訊</li>
+                <li>裝置識別碼</li>
+                <li>使用行為分析</li>
+                <li>廣告追蹤資料</li>
+            </ul>
+            <p style="margin-top: 12px;">App 內無帳號系統、無登入功能、無任何形式的雲端服務。</p>
+        </section>
+
+        <section>
+            <h2>裝置權限</h2>
+            <p>DualShot 會請求以下裝置權限，僅用於核心錄影功能：</p>
+            <ul>
+                <li><strong>相機</strong> — 錄製影片（必要）</li>
+                <li><strong>麥克風</strong> — 錄製影片音訊（必要）</li>
+                <li><strong>相簿</strong> — 將錄製完成的影片儲存至你的相簿（必要）</li>
+            </ul>
+            <p style="margin-top: 12px;">這些權限僅在裝置本地使用，不會將任何資料傳送至外部伺服器。</p>
+        </section>
+
+        <section>
+            <h2>第三方服務</h2>
+            <p>DualShot 不整合任何第三方分析、廣告或追蹤服務。App 不包含 SDK 或程式碼會將資料傳送至第三方。</p>
+        </section>
+
+        <section>
+            <h2>影片儲存</h2>
+            <p>所有錄製的影片僅儲存在你的裝置相簿中。DualShot 不會上傳、備份或以任何方式將影片傳輸至外部。錄影期間的暫存檔案在儲存完成後會立即刪除。</p>
+        </section>
+
+        <section>
+            <h2>兒童隱私</h2>
+            <p>DualShot 不針對 13 歲以下兒童設計，也不會有意收集兒童的個人資訊。</p>
+        </section>
+
+        <section>
+            <h2>政策更新</h2>
+            <p>如本政策有所更新，我們會在此頁面公布修改內容。重大變更將透過 App 更新說明通知使用者。</p>
+            <p style="margin-top: 12px; color: var(--tertiary); font-size: 13px;">最後更新日期：2026 年 4 月 7 日</p>
+        </section>
+
+        <section>
+            <h2>聯絡方式</h2>
+            <p>如有任何隱私相關疑問，請透過以下方式聯繫：</p>
+            <p style="margin-top: 8px;"><strong>Email</strong>：timshih@dualshot.app</p>
+        </section>
+    </div>
+
+    <!-- English -->
+    <div id="content-en" class="hidden">
+        <section>
+            <h2>Overview</h2>
+            <p>DualShot is a fully offline camera recording app. We do not collect, store, or transmit any user data. Your videos stay on your device and nowhere else.</p>
+            <div class="highlight">
+                <p>In short: we collect nothing.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Data Collection</h2>
+            <p>DualShot does not collect any personal information, including but not limited to:</p>
+            <ul>
+                <li>Name, email address, or phone number</li>
+                <li>Location data</li>
+                <li>Device identifiers</li>
+                <li>Usage analytics</li>
+                <li>Advertising tracking data</li>
+            </ul>
+            <p style="margin-top: 12px;">The app has no account system, no login, and no cloud services of any kind.</p>
+        </section>
+
+        <section>
+            <h2>Device Permissions</h2>
+            <p>DualShot requests the following device permissions, used solely for core recording functionality:</p>
+            <ul>
+                <li><strong>Camera</strong> — to record video (required)</li>
+                <li><strong>Microphone</strong> — to record audio with video (required)</li>
+                <li><strong>Photo Library</strong> — to save recorded videos to your library (required)</li>
+            </ul>
+            <p style="margin-top: 12px;">These permissions are used locally on your device only. No data is transmitted to any external server.</p>
+        </section>
+
+        <section>
+            <h2>Third-Party Services</h2>
+            <p>DualShot does not integrate any third-party analytics, advertising, or tracking services. The app contains no SDKs or code that transmit data to third parties.</p>
+        </section>
+
+        <section>
+            <h2>Video Storage</h2>
+            <p>All recorded videos are stored exclusively in your device's photo library. DualShot does not upload, back up, or transmit videos externally in any way. Temporary files created during recording are deleted immediately after saving is complete.</p>
+        </section>
+
+        <section>
+            <h2>Children's Privacy</h2>
+            <p>DualShot is not designed for children under the age of 13, and we do not knowingly collect personal information from children.</p>
+        </section>
+
+        <section>
+            <h2>Policy Updates</h2>
+            <p>If this policy is updated, changes will be posted on this page. Significant changes will be communicated through app update notes.</p>
+            <p style="margin-top: 12px; color: var(--tertiary); font-size: 13px;">Last updated: April 7, 2026</p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>For any privacy-related questions, please contact us at:</p>
+            <p style="margin-top: 8px;"><strong>Email</strong>: timshih@dualshot.app</p>
+        </section>
+    </div>
+
+    <footer>
+        <p class="slogan">一鏡雙生，創作不重來。</p>
+        <p>&copy; 2026 DualShot. All rights reserved.</p>
+    </footer>
+</div>
+
+<script>
+    function switchLang(lang) {
+        document.getElementById('content-zh').classList.toggle('hidden', lang !== 'zh');
+        document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
+        document.querySelector('.lang-label-zh').classList.toggle('hidden', lang !== 'zh');
+        document.querySelector('.lang-label-en').classList.toggle('hidden', lang !== 'en');
+        document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    }
+</script>
+
+</body>
+</html>
