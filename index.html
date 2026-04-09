@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DuoRatio — 隱私權政策 Privacy Policy</title>
+    <title>DuoRatio</title>
     <style>
         :root {
             --bg: #FAF8F5;
@@ -34,7 +34,7 @@
 
         header {
             text-align: center;
-            margin-bottom: 48px;
+            margin-bottom: 32px;
         }
 
         header h1 {
@@ -47,6 +47,32 @@
         header p {
             color: var(--secondary);
             font-size: 15px;
+        }
+
+        .page-switch {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .page-switch button {
+            padding: 10px 24px;
+            border: none;
+            background: transparent;
+            color: var(--tertiary);
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+        }
+
+        .page-switch button.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
         }
 
         .lang-switch {
@@ -102,6 +128,12 @@
             margin-bottom: 6px;
         }
 
+        section a {
+            color: var(--primary);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
         .highlight {
             background: #F5F0EC;
             border-radius: 8px;
@@ -113,6 +145,40 @@
             font-size: 14px;
             color: var(--primary);
             font-weight: 500;
+        }
+
+        .support-card {
+            text-align: center;
+            padding: 40px 28px;
+        }
+
+        .support-card .icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .support-card h2 {
+            margin-bottom: 8px;
+        }
+
+        .support-card .desc {
+            margin-bottom: 24px;
+        }
+
+        .support-card .email-link {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .support-card .email-link:hover {
+            opacity: 0.85;
         }
 
         footer {
@@ -136,137 +202,237 @@
 <div class="container">
     <header>
         <h1>DuoRatio</h1>
-        <p class="lang-label-zh">隱私權政策</p>
-        <p class="lang-label-en hidden">Privacy Policy</p>
+        <p id="page-subtitle"></p>
     </header>
+
+    <div class="page-switch">
+        <button id="tab-privacy" onclick="switchPage('privacy')">
+            <span class="tab-zh">隱私權政策</span>
+            <span class="tab-en hidden">Privacy</span>
+        </button>
+        <button id="tab-support" onclick="switchPage('support')">
+            <span class="tab-zh">支援</span>
+            <span class="tab-en hidden">Support</span>
+        </button>
+    </div>
 
     <div class="lang-switch">
         <button id="btn-zh" class="active" onclick="switchLang('zh')">繁體中文</button>
         <button id="btn-en" onclick="switchLang('en')">English</button>
     </div>
 
-    <!-- 繁體中文 -->
-    <div id="content-zh">
-        <section>
-            <h2>總覽</h2>
-            <p>DuoRatio 是一款完全離線運作的相機錄影 App。我們不收集、不儲存、不傳輸任何使用者資料。你的影片只存在你的裝置上。</p>
-            <div class="highlight">
-                <p>簡單來說：我們什麼都不收集。</p>
-            </div>
-        </section>
+    <!-- ==================== 隱私權政策 ==================== -->
+    <div id="page-privacy">
+        <!-- 繁體中文 -->
+        <div class="content-zh">
+            <section>
+                <h2>總覽</h2>
+                <p>DuoRatio 是一款完全離線運作的相機錄影 App。我們不收集、不儲存、不傳輸任何使用者資料。你的影片只存在你的裝置上。</p>
+                <div class="highlight">
+                    <p>簡單來說：我們什麼都不收集。</p>
+                </div>
+            </section>
 
-        <section>
-            <h2>資料收集</h2>
-            <p>DuoRatio 不收集任何個人資訊，包括但不限於：</p>
-            <ul>
-                <li>姓名、電子郵件、電話號碼</li>
-                <li>位置資訊</li>
-                <li>裝置識別碼</li>
-                <li>使用行為分析</li>
-                <li>廣告追蹤資料</li>
-            </ul>
-            <p style="margin-top: 12px;">App 內無帳號系統、無登入功能、無任何形式的雲端服務。</p>
-        </section>
+            <section>
+                <h2>資料收集</h2>
+                <p>DuoRatio 不收集任何個人資訊，包括但不限於：</p>
+                <ul>
+                    <li>姓名、電子郵件、電話號碼</li>
+                    <li>位置資訊</li>
+                    <li>裝置識別碼</li>
+                    <li>使用行為分析</li>
+                    <li>廣告追蹤資料</li>
+                </ul>
+                <p style="margin-top: 12px;">App 內無帳號系統、無登入功能、無任何形式的雲端服務。</p>
+            </section>
 
-        <section>
-            <h2>裝置權限</h2>
-            <p>DuoRatio 會請求以下裝置權限，僅用於核心錄影功能：</p>
-            <ul>
-                <li><strong>相機</strong> — 錄製影片（必要）</li>
-                <li><strong>麥克風</strong> — 錄製影片音訊（必要）</li>
-                <li><strong>相簿</strong> — 將錄製完成的影片儲存至你的相簿（必要）</li>
-            </ul>
-            <p style="margin-top: 12px;">這些權限僅在裝置本地使用，不會將任何資料傳送至外部伺服器。</p>
-        </section>
+            <section>
+                <h2>裝置權限</h2>
+                <p>DuoRatio 會請求以下裝置權限，僅用於核心錄影功能：</p>
+                <ul>
+                    <li><strong>相機</strong> — 錄製影片（必要）</li>
+                    <li><strong>麥克風</strong> — 錄製影片音訊（必要）</li>
+                    <li><strong>相簿</strong> — 將錄製完成的影片儲存至你的相簿（必要）</li>
+                </ul>
+                <p style="margin-top: 12px;">這些權限僅在裝置本地使用，不會將任何資料傳送至外部伺服器。</p>
+            </section>
 
-        <section>
-            <h2>第三方服務</h2>
-            <p>DuoRatio 不整合任何第三方分析、廣告或追蹤服務。App 不包含 SDK 或程式碼會將資料傳送至第三方。</p>
-        </section>
+            <section>
+                <h2>第三方服務</h2>
+                <p>DuoRatio 不整合任何第三方分析、廣告或追蹤服務。App 不包含 SDK 或程式碼會將資料傳送至第三方。</p>
+            </section>
 
-        <section>
-            <h2>影片儲存</h2>
-            <p>所有錄製的影片僅儲存在你的裝置相簿中。DuoRatio 不會上傳、備份或以任何方式將影片傳輸至外部。錄影期間的暫存檔案在儲存完成後會立即刪除。</p>
-        </section>
+            <section>
+                <h2>影片儲存</h2>
+                <p>所有錄製的影片僅儲存在你的裝置相簿中。DuoRatio 不會上傳、備份或以任何方式將影片傳輸至外部。錄影期間的暫存檔案在儲存完成後會立即刪除。</p>
+            </section>
 
-        <section>
-            <h2>兒童隱私</h2>
-            <p>DuoRatio 不針對 13 歲以下兒童設計，也不會有意收集兒童的個人資訊。</p>
-        </section>
+            <section>
+                <h2>兒童隱私</h2>
+                <p>DuoRatio 不針對 13 歲以下兒童設計，也不會有意收集兒童的個人資訊。</p>
+            </section>
 
-        <section>
-            <h2>政策更新</h2>
-            <p>如本政策有所更新，我們會在此頁面公布修改內容。重大變更將透過 App 更新說明通知使用者。</p>
-            <p style="margin-top: 12px; color: var(--tertiary); font-size: 13px;">最後更新日期：2026 年 4 月 7 日</p>
-        </section>
+            <section>
+                <h2>政策更新</h2>
+                <p>如本政策有所更新，我們會在此頁面公布修改內容。重大變更將透過 App 更新說明通知使用者。</p>
+                <p style="margin-top: 12px; color: var(--tertiary); font-size: 13px;">最後更新日期：2026 年 4 月 7 日</p>
+            </section>
 
-        <section>
-            <h2>聯絡方式</h2>
-            <p>如有任何隱私相關疑問，請透過以下方式聯繫：</p>
-            <p style="margin-top: 8px;"><strong>Email</strong>：timshih@thdg.site</p>
-        </section>
+            <section>
+                <h2>聯絡方式</h2>
+                <p>如有任何隱私相關疑問，請透過以下方式聯繫：</p>
+                <p style="margin-top: 8px;"><strong>Email</strong>：timshih@thdg.site</p>
+            </section>
+        </div>
+
+        <!-- English -->
+        <div class="content-en hidden">
+            <section>
+                <h2>Overview</h2>
+                <p>DuoRatio is a fully offline camera recording app. We do not collect, store, or transmit any user data. Your videos stay on your device and nowhere else.</p>
+                <div class="highlight">
+                    <p>In short: we collect nothing.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Data Collection</h2>
+                <p>DuoRatio does not collect any personal information, including but not limited to:</p>
+                <ul>
+                    <li>Name, email address, or phone number</li>
+                    <li>Location data</li>
+                    <li>Device identifiers</li>
+                    <li>Usage analytics</li>
+                    <li>Advertising tracking data</li>
+                </ul>
+                <p style="margin-top: 12px;">The app has no account system, no login, and no cloud services of any kind.</p>
+            </section>
+
+            <section>
+                <h2>Device Permissions</h2>
+                <p>DuoRatio requests the following device permissions, used solely for core recording functionality:</p>
+                <ul>
+                    <li><strong>Camera</strong> — to record video (required)</li>
+                    <li><strong>Microphone</strong> — to record audio with video (required)</li>
+                    <li><strong>Photo Library</strong> — to save recorded videos to your library (required)</li>
+                </ul>
+                <p style="margin-top: 12px;">These permissions are used locally on your device only. No data is transmitted to any external server.</p>
+            </section>
+
+            <section>
+                <h2>Third-Party Services</h2>
+                <p>DuoRatio does not integrate any third-party analytics, advertising, or tracking services. The app contains no SDKs or code that transmit data to third parties.</p>
+            </section>
+
+            <section>
+                <h2>Video Storage</h2>
+                <p>All recorded videos are stored exclusively in your device's photo library. DuoRatio does not upload, back up, or transmit videos externally in any way. Temporary files created during recording are deleted immediately after saving is complete.</p>
+            </section>
+
+            <section>
+                <h2>Children's Privacy</h2>
+                <p>DuoRatio is not designed for children under the age of 13, and we do not knowingly collect personal information from children.</p>
+            </section>
+
+            <section>
+                <h2>Policy Updates</h2>
+                <p>If this policy is updated, changes will be posted on this page. Significant changes will be communicated through app update notes.</p>
+                <p style="margin-top: 12px; color: var(--tertiary); font-size: 13px;">Last updated: April 7, 2026</p>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <p>For any privacy-related questions, please contact us at:</p>
+                <p style="margin-top: 8px;"><strong>Email</strong>: timshih@thdg.site</p>
+            </section>
+        </div>
     </div>
 
-    <!-- English -->
-    <div id="content-en" class="hidden">
-        <section>
-            <h2>Overview</h2>
-            <p>DuoRatio is a fully offline camera recording app. We do not collect, store, or transmit any user data. Your videos stay on your device and nowhere else.</p>
-            <div class="highlight">
-                <p>In short: we collect nothing.</p>
-            </div>
-        </section>
+    <!-- ==================== 支援 ==================== -->
+    <div id="page-support" class="hidden">
+        <!-- 繁體中文 -->
+        <div class="content-zh">
+            <section class="support-card">
+                <div class="icon">💬</div>
+                <h2>需要協助嗎？</h2>
+                <p class="desc">如果你在使用 DuoRatio 時遇到任何問題，歡迎寫信給我們。我們會盡快回覆。</p>
+                <a href="mailto:timshih@thdg.site?subject=DuoRatio%20支援請求" class="email-link">寄送 Email</a>
+            </section>
 
-        <section>
-            <h2>Data Collection</h2>
-            <p>DuoRatio does not collect any personal information, including but not limited to:</p>
-            <ul>
-                <li>Name, email address, or phone number</li>
-                <li>Location data</li>
-                <li>Device identifiers</li>
-                <li>Usage analytics</li>
-                <li>Advertising tracking data</li>
-            </ul>
-            <p style="margin-top: 12px;">The app has no account system, no login, and no cloud services of any kind.</p>
-        </section>
+            <section>
+                <h2>常見問題</h2>
+                <ul>
+                    <li style="margin-bottom: 16px;">
+                        <strong>為什麼我的裝置不支援雙鏡頭模式？</strong>
+                        <p style="margin-top: 4px;">雙鏡頭同步錄影需要支援 AVCaptureMultiCamSession 的機型（iPhone XS 或更新）。如果你的裝置不支援，App 會自動切換至單鏡頭模式，同樣可以輸出兩種比例的影片。</p>
+                    </li>
+                    <li style="margin-bottom: 16px;">
+                        <strong>影片儲存在哪裡？</strong>
+                        <p style="margin-top: 4px;">所有影片都儲存在你的裝置相簿中。DuoRatio 不會上傳任何檔案到雲端。</p>
+                    </li>
+                    <li style="margin-bottom: 16px;">
+                        <strong>錄影時手機發燙怎麼辦？</strong>
+                        <p style="margin-top: 4px;">雙鏡頭同時錄影會消耗較多資源，屬正常現象。如果裝置過熱，App 會主動提示你。建議在通風良好的環境下使用，並避免長時間連續錄影。</p>
+                    </li>
+                    <li style="margin-bottom: 16px;">
+                        <strong>支援哪些影片格式與解析度？</strong>
+                        <p style="margin-top: 4px;">支援 MOV 與 MP4 格式，解析度可選 4K 或 1080p，幀率支援 24 / 30 / 60 fps。可在設定中調整。</p>
+                    </li>
+                    <li>
+                        <strong>如何恢復購買？</strong>
+                        <p style="margin-top: 4px;">DuoRatio 為一次性付費 App，購買後即可永久使用。如需重新下載，請使用購買時的 Apple ID 至 App Store 重新下載即可，不會再次收費。</p>
+                    </li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Device Permissions</h2>
-            <p>DuoRatio requests the following device permissions, used solely for core recording functionality:</p>
-            <ul>
-                <li><strong>Camera</strong> — to record video (required)</li>
-                <li><strong>Microphone</strong> — to record audio with video (required)</li>
-                <li><strong>Photo Library</strong> — to save recorded videos to your library (required)</li>
-            </ul>
-            <p style="margin-top: 12px;">These permissions are used locally on your device only. No data is transmitted to any external server.</p>
-        </section>
+            <section>
+                <h2>聯絡資訊</h2>
+                <p><strong>Email</strong>：<a href="mailto:timshih@thdg.site">timshih@thdg.site</a></p>
+                <p style="margin-top: 8px; color: var(--tertiary); font-size: 13px;">我們通常會在 48 小時內回覆。</p>
+            </section>
+        </div>
 
-        <section>
-            <h2>Third-Party Services</h2>
-            <p>DuoRatio does not integrate any third-party analytics, advertising, or tracking services. The app contains no SDKs or code that transmit data to third parties.</p>
-        </section>
+        <!-- English -->
+        <div class="content-en hidden">
+            <section class="support-card">
+                <div class="icon">💬</div>
+                <h2>Need help?</h2>
+                <p class="desc">If you run into any issues while using DuoRatio, feel free to reach out. We'll get back to you as soon as we can.</p>
+                <a href="mailto:timshih@thdg.site?subject=DuoRatio%20Support%20Request" class="email-link">Send Email</a>
+            </section>
 
-        <section>
-            <h2>Video Storage</h2>
-            <p>All recorded videos are stored exclusively in your device's photo library. DuoRatio does not upload, back up, or transmit videos externally in any way. Temporary files created during recording are deleted immediately after saving is complete.</p>
-        </section>
+            <section>
+                <h2>FAQ</h2>
+                <ul>
+                    <li style="margin-bottom: 16px;">
+                        <strong>Why doesn't my device support dual-lens mode?</strong>
+                        <p style="margin-top: 4px;">Simultaneous dual-lens recording requires a device that supports AVCaptureMultiCamSession (iPhone XS or later). If your device doesn't support it, the app will automatically switch to single-lens mode, which still outputs videos in both aspect ratios.</p>
+                    </li>
+                    <li style="margin-bottom: 16px;">
+                        <strong>Where are my videos saved?</strong>
+                        <p style="margin-top: 4px;">All videos are saved to your device's photo library. DuoRatio does not upload any files to the cloud.</p>
+                    </li>
+                    <li style="margin-bottom: 16px;">
+                        <strong>My phone gets warm during recording. Is this normal?</strong>
+                        <p style="margin-top: 4px;">Dual-lens simultaneous recording uses more resources, which is expected. The app will alert you if the device overheats. We recommend recording in a well-ventilated area and avoiding extended recording sessions.</p>
+                    </li>
+                    <li style="margin-bottom: 16px;">
+                        <strong>What video formats and resolutions are supported?</strong>
+                        <p style="margin-top: 4px;">DuoRatio supports MOV and MP4 formats, with 4K or 1080p resolution, and 24 / 30 / 60 fps frame rates. You can adjust these in Settings.</p>
+                    </li>
+                    <li>
+                        <strong>How do I restore my purchase?</strong>
+                        <p style="margin-top: 4px;">DuoRatio is a one-time purchase. Once bought, it's yours forever. To re-download, simply use the same Apple ID on the App Store — you won't be charged again.</p>
+                    </li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Children's Privacy</h2>
-            <p>DuoRatio is not designed for children under the age of 13, and we do not knowingly collect personal information from children.</p>
-        </section>
-
-        <section>
-            <h2>Policy Updates</h2>
-            <p>If this policy is updated, changes will be posted on this page. Significant changes will be communicated through app update notes.</p>
-            <p style="margin-top: 12px; color: var(--tertiary); font-size: 13px;">Last updated: April 7, 2026</p>
-        </section>
-
-        <section>
-            <h2>Contact</h2>
-            <p>For any privacy-related questions, please contact us at:</p>
-            <p style="margin-top: 8px;"><strong>Email</strong>: timshih@thdg.site</p>
-        </section>
+            <section>
+                <h2>Contact</h2>
+                <p><strong>Email</strong>: <a href="mailto:timshih@thdg.site">timshih@thdg.site</a></p>
+                <p style="margin-top: 8px; color: var(--tertiary); font-size: 13px;">We typically respond within 48 hours.</p>
+            </section>
+        </div>
     </div>
 
     <footer>
@@ -276,14 +442,50 @@
 </div>
 
 <script>
+    let currentPage = 'privacy';
+    let currentLang = 'zh';
+
+    function switchPage(page) {
+        currentPage = page;
+        document.getElementById('page-privacy').classList.toggle('hidden', page !== 'privacy');
+        document.getElementById('page-support').classList.toggle('hidden', page !== 'support');
+        document.getElementById('tab-privacy').classList.toggle('active', page === 'privacy');
+        document.getElementById('tab-support').classList.toggle('active', page === 'support');
+        updateSubtitle();
+        history.replaceState(null, '', page === 'support' ? '?page=support' : '?page=privacy');
+    }
+
     function switchLang(lang) {
-        document.getElementById('content-zh').classList.toggle('hidden', lang !== 'zh');
-        document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
-        document.querySelector('.lang-label-zh').classList.toggle('hidden', lang !== 'zh');
-        document.querySelector('.lang-label-en').classList.toggle('hidden', lang !== 'en');
+        currentLang = lang;
+        document.querySelectorAll('.content-zh').forEach(el => el.classList.toggle('hidden', lang !== 'zh'));
+        document.querySelectorAll('.content-en').forEach(el => el.classList.toggle('hidden', lang !== 'en'));
+        document.querySelectorAll('.tab-zh').forEach(el => el.classList.toggle('hidden', lang !== 'zh'));
+        document.querySelectorAll('.tab-en').forEach(el => el.classList.toggle('hidden', lang !== 'en'));
         document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
         document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        updateSubtitle();
     }
+
+    function updateSubtitle() {
+        const subtitles = {
+            'privacy-zh': '隱私權政策',
+            'privacy-en': 'Privacy Policy',
+            'support-zh': '支援',
+            'support-en': 'Support'
+        };
+        document.getElementById('page-subtitle').textContent = subtitles[currentPage + '-' + currentLang];
+    }
+
+    // 根據 URL 參數初始化頁面
+    (function init() {
+        const params = new URLSearchParams(window.location.search);
+        const page = params.get('page');
+        if (page === 'support') {
+            switchPage('support');
+        } else {
+            switchPage('privacy');
+        }
+    })();
 </script>
 
 </body>
